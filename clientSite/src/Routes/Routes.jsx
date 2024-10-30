@@ -10,6 +10,8 @@ import AddFood from "../pages/AddFood";
 import MyAddedFood from "./MyAddedFood";
 import ErrorPage from "../pages/ErrorPage";
 import AllFoods from "../pages/AllFoods";
+import FoodDetails from "../pages/FoodDetails";
+import MyCart from "../pages/MyCart";
 const router=createBrowserRouter([
     {
         path:'/',
@@ -39,6 +41,15 @@ const router=createBrowserRouter([
             {
                 path:'/allFoods',
                 element:<AllFoods></AllFoods>
+            },
+            {
+                path:'/foodDetails/:id',
+                loader:({params})=> fetch(`${import.meta.env.VITE_API_URL}/foodDetails/${params.id}`),
+                element:<FoodDetails></FoodDetails>
+            },
+            {
+                path:'/mycart',
+                element:<MyCart></MyCart>
             }
           
         ]

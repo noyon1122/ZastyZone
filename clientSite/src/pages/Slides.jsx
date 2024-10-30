@@ -1,37 +1,36 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import Slide from './Slide';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+
+
+const uri1='https://i.ibb.co.com/0Kn9F85/style-still-life-with-noodles-bowl.jpg'
+const uri2='https://i.ibb.co.com/J2m246L/side-view-pilaf-with-stewed-beef-meat-plate.jpg'
+const uri3='https://i.ibb.co.com/N1ywb7P/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg'
+const uri4='https://i.ibb.co.com/K06PgMp/delicious-rice-chicken-meat-patties-with-garlic-tomato-sauce.jpg'
+const uri6='https://i.ibb.co.com/7r6Ywts/chicken-skewers-with-slices-sweet-peppers-dill.jpg'
+
+
+
+
 
 
 
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
-
 
 const Slides = () => {
   return (
-    <div>
-         <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide className='bg-green-500 w-60 h-60'>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+    <div className="my-10">
+         <Swiper watchSlidesProgress={true} slidesPerView={3} className="mySwiper" >
+        
+       
+       <SwiperSlide ><Slide uri={uri1} text="Chow Mein" ></Slide></SwiperSlide>
+        <SwiperSlide ><Slide uri={uri2} text="Meat Khichuri"></Slide></SwiperSlide>
+        <SwiperSlide ><Slide uri={uri3} text="Pasta Paradise"></Slide></SwiperSlide>
+        <SwiperSlide ><Slide uri={uri4} text="Chicken Chop"></Slide></SwiperSlide>
+        <SwiperSlide ><Slide uri={uri6} text="Skewers"></Slide></SwiperSlide>
+      
+     
       </Swiper>
     </div>
   )

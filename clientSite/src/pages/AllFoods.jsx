@@ -13,7 +13,7 @@ const AllFoods = () => {
         const getFood=async ()=>{
             const {data}=await axios(`${import.meta.env.VITE_API_URL}/allfoods`)
             setFoods(data)
-            console.log(data)
+           // console.log(data)
     
         }
         getFood()

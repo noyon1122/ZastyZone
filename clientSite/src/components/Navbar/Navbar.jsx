@@ -5,21 +5,21 @@ import { AuthContext } from '../../Providers/AuthProvider'
 
 const Navbar = () => {
   const {user,logOut}=useContext(AuthContext)
-  const navLinks=<>
-  <Link className='hover:bg-slate-200 px-2 py-1 hover:rounded-md font-medium' to={'/'}><li>Home</li></Link>
-  <Link className='hover:bg-slate-200 px-2 py-1 hover:rounded-md font-medium' to={'/allFoods'}><li>All Foods</li></Link>
-  <Link className='hover:bg-slate-200 px-2 py-1 hover:rounded-md font-medium' to={'/gallery'}><li>Gallery</li></Link>
+  const navLinks=<div className=''>
+  <Link className='hover:bg-slate-100 px-2 py-1 hover:rounded-md  font-medium' to={'/'}><li>Home</li></Link>
+  <Link className='hover:bg-slate-100 px-2 py-1 hover:rounded-md font-medium' to={'/allFoods'}><li>All Foods</li></Link>
+  <Link className='hover:bg-slate-100 px-2 py-1 hover:rounded-md font-medium' to={'/gallery'}><li>Gallery</li></Link>
   
-  </>
+  </div>
 
  // console.log(user)
   return (
-    <div className="navbar bg-zinc-900 text-white shadow-lg">
+    <div className="navbar bg-zinc-900 shadow-lg">
   
   <div className='flex justify-between mx-auto w-full'>
   <div className="navbar-start">
       <div className="dropdown">
-        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -39,10 +39,10 @@ const Navbar = () => {
          {navLinks}
         </ul>
       </div>
-      <Link className="btn btn-ghost text-xl sm:text-2xl font-bold">ZastyZone</Link>
+      <Link className="btn btn-ghost text-white  text-xl sm:text-2xl font-bold">ZastyZone</Link>
     </div>
     <div className="navbar-center hidden lg:flex">
-      <ul className="menu menu-horizontal px-1 space-x-6 text-xl">
+      <ul className="menu menu-horizontal px-1 space-x-6 text-white  text-xl">
       <Link to={'/'}><li>Home</li></Link>
       <Link to={'allFoods'}><li>All Foods</li></Link>
       <Link to={'gallery'}><li>Gallery</li></Link>
