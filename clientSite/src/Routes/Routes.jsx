@@ -12,6 +12,7 @@ import ErrorPage from "../pages/ErrorPage";
 import AllFoods from "../pages/AllFoods";
 import FoodDetails from "../pages/FoodDetails";
 import MyCart from "../pages/MyCart";
+import Gallery from "../pages/Gallery";
 const router=createBrowserRouter([
     {
         path:'/',
@@ -35,7 +36,7 @@ const router=createBrowserRouter([
                 element:<AddFood></AddFood>
             },
             {
-                path:'/myaddedfood',
+                path:'/myaddedfoods',
                 element:<MyAddedFood></MyAddedFood>
             },
             {
@@ -50,6 +51,10 @@ const router=createBrowserRouter([
             {
                 path:'/mycart',
                 element:<MyCart></MyCart>
+            },
+            {
+                path:'/gallery',
+                element:<Gallery></Gallery>
             }
           
         ]

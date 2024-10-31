@@ -51,7 +51,7 @@ const Navbar = () => {
     <div className="navbar-end flex text-xl justify-end mx-8 font-medium items-center">
       {
       !user &&
-        <Link to={'/login'}><button className='btn btn-ghost font-bold text-lg'>Login</button></Link>
+        <Link to={'/login'}><button className='btn btn-ghost font-bold text-lg text-white'>Login</button></Link>
       
     }
      {

@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from 'swiper/modules';
 
 import Slide from './Slide';
 import 'swiper/css';
@@ -16,12 +17,29 @@ const uri6='https://i.ibb.co.com/7r6Ywts/chicken-skewers-with-slices-sweet-peppe
 
 
 
+
 // import required modules
 
 const Slides = () => {
   return (
-    <div className="my-10">
-         <Swiper watchSlidesProgress={true} slidesPerView={3} className="mySwiper" >
+   <div className="bg-gray-50 ">
+     <div className="py-5 container mx-auto">
+          <div className="flex flex-col justify-center items-center border-5 border-red-500 mb-10">
+            <h1 className="text-2xl text-red-600 mb-2">crispy, every bite taste
+            </h1>
+            <h1 className="text-5xl font-bold">Hot Delicious Items</h1>
+          </div>
+         <Swiper watchSlidesProgress={true} 
+         slidesPerView={3}
+         spaceBetween={20}
+         centeredSlides={true}
+         loop={true}
+         autoplay={{
+           
+           disableOnInteraction: false,
+         }}
+         modules={[Autoplay]}
+         className="mySwiper" >
         
        
        <SwiperSlide ><Slide uri={uri1} text="Chow Mein" ></Slide></SwiperSlide>
@@ -33,6 +51,7 @@ const Slides = () => {
      
       </Swiper>
     </div>
+   </div>
   )
 }
 

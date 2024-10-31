@@ -8,7 +8,8 @@ export default {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('../../assets/Banner.jpg')",
-      }
+      },
+    
     },
   },
   plugins: [require('daisyui'),],

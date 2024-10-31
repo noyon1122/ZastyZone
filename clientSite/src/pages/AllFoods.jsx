@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { AuthContext } from "../Providers/AuthProvider"
 import axios from "axios"
 import SingleFood from "./SingleFood"
-import SweetPagination from "sweetpagination";
+
 
 
 const AllFoods = () => {
