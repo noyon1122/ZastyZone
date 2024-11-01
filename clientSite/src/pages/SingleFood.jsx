@@ -26,7 +26,7 @@ const SingleFood = ({food}) => {
     
   }
   return (
-    <div className="card card-compact bg-base-100 shadow-xl ml-6 mt-3">
+    <div className="card card-compact bg-base-100 shadow-xl ml-6 mt-[75px]">
     
      <div className="">
     <figure className="">

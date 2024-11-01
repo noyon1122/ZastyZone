@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.svg'
 import { useContext } from 'react'
 import { AuthContext } from '../../Providers/AuthProvider'
-
+import './Navbar.css'
 const Navbar = () => {
   const {user,logOut}=useContext(AuthContext)
   const navLinks=<div className=''>
@@ -14,7 +14,7 @@ const Navbar = () => {
 
  // console.log(user)
   return (
-    <div className="navbar bg-zinc-900 shadow-lg">
+    <div className="navbar bg-zinc-900 shadow-lg font-Poppins fixed z-20 ">
   
   <div className='flex justify-between mx-auto w-full'>
   <div className="navbar-start">
@@ -39,19 +39,19 @@ const Navbar = () => {
          {navLinks}
         </ul>
       </div>
-      <Link className="btn btn-ghost text-white  text-xl sm:text-2xl font-bold">ZastyZone</Link>
+      <Link className="btn btn-ghost text-white  text-xl sm:text-3xl font-bold  hover:text-orange-500">ZastyZone</Link>
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1 space-x-6 text-white  text-xl">
-      <Link to={'/'}><li>Home</li></Link>
-      <Link to={'allFoods'}><li>All Foods</li></Link>
-      <Link to={'gallery'}><li>Gallery</li></Link>
+      <Link className='hover:text-orange-500' to={'/'}><li>Home</li></Link>
+      <Link className='hover:text-orange-500' to={'allFoods'}><li>All Foods</li></Link>
+      <Link className='hover:text-orange-500' to={'gallery'}><li>Gallery</li></Link>
       </ul>
     </div>
     <div className="navbar-end flex text-xl justify-end mx-8 font-medium items-center">
       {
       !user &&
-        <Link to={'/login'}><button className='btn btn-ghost font-bold text-lg text-white'>Login</button></Link>
+        <Link to={'/login'}><button className='btn btn-ghost font-bold text-lg text-white hover:text-orange-500 '>Login</button></Link>
       
     }
      {

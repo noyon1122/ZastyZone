@@ -1,8 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from 'swiper/modules';
+import Aos from "aos";
 
 import Slide from './Slide';
 import 'swiper/css';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+
 
 
 const uri1='https://i.ibb.co.com/0Kn9F85/style-still-life-with-noodles-bowl.jpg'
@@ -23,7 +27,7 @@ const uri6='https://i.ibb.co.com/7r6Ywts/chicken-skewers-with-slices-sweet-peppe
 const Slides = () => {
   return (
    <div className="bg-gray-50 ">
-     <div className="py-5 container mx-auto">
+     <div data-aos="fade-up" className="py-5 container mx-auto">
           <div className="flex flex-col justify-center items-center border-5 border-red-500 mb-10">
             <h1 className="text-2xl text-red-600 mb-2">crispy, every bite taste
             </h1>

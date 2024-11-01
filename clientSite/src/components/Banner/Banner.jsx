@@ -17,7 +17,7 @@ const Banner = () => {
           
            <h1   className=''>Indulge in the delightful culinary journey of our menu offerings, <br /> promising an unforgettable experience for your taste buds.</h1>
            <div className='mt-10'>
-           <Link><button className="btn btn-outline btn-accent">Order Now</button></Link>
+           <Link to={'/allFoods'}><button className="btn btn-outline btn-accent">Order Now</button></Link>
         </div>
         </div>
        

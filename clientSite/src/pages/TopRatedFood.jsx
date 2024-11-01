@@ -8,12 +8,13 @@ import Sandwich from '../Images/Sandwich.jpg'
 import SeaFood from '../Images/SeaFood.jpg'
 import SpringRoll from '../Images/SpringRoll.jpg'
 
+
 const TopRatedFood = () => {
   return (
     <div className=' bg-gray-50'>
-     <div className='container mx-auto'>
-     <div className=' flex flex-col justify-center items-center py-5'>
-        <h1 className='text-2xl text-red-600'> Best Selling Dishes</h1>
+     <div  className='container mx-auto'>
+     <div  className=' flex flex-col justify-center items-center py-5'>
+        <h1  className='text-2xl text-red-600'> Best Selling Dishes</h1>
        <h1 className='text-5xl font-bold'> Explore Our Foods</h1>
         </div>
         <div className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>

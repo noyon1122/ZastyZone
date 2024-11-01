@@ -37,7 +37,7 @@ async function run() {
     //insert food in the database 
     app.post('/foods',async(req,res)=>{
         const newFood=req.body;
-        console.log(newFood)
+       // console.log(newFood)
         const result=await foodCollection.insertOne(newFood)
         res.send(result)
 
@@ -50,9 +50,18 @@ async function run() {
     //get a single food using id
     app.get('/foodDetails/:id',async(req,res)=>{
       const id=req.params.id;
-      console.log(id)
+     // console.log(id)
       const query={ _id : new ObjectId(id)}
       const result=await foodCollection.findOne(query)
+      res.send(result)
+    })
+
+     //get all food using user email
+     app.get('/addedfood/:email',async(req,res)=>{
+      const email=req.params.email;
+      //console.log(email)
+      const query={email:email}
+      const result=await foodCollection.find(query).toArray()
       res.send(result)
     })
 
@@ -66,7 +75,7 @@ async function run() {
      //get all food using by user for add to cart 
      app.get('/cart/:email',async(req,res)=>{
       const email=req.params.email;
-     console.log(email)
+      // console.log(email)
       const query={email:email}
       const result=await cartCollection.find(query).toArray()
       res.send(result)
