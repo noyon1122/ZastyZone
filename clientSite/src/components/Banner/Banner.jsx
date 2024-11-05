@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import banner from '../../assets/Banner.jpg'
+import banner from '../../assets/Banner.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..

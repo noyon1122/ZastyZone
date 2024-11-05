@@ -1,51 +1,44 @@
 
-import burger from '../Images/burger.jpg'
-import fish from '../Images/fish.jpg'
-import FriedChicken from '../Images/FriedChicken.jpg'
-import Pizza from '../Images/Pizza.jpg'
-import rice from '../Images/rice.jpg'
-import Sandwich from '../Images/Sandwich.jpg'
-import SeaFood from '../Images/SeaFood.jpg'
-import SpringRoll from '../Images/SpringRoll.jpg'
-import img1 from '../Images/img1.jpeg'
-import img2 from '../Images/img2.jpg'
-import img3 from '../Images/img3.jpg'
-import img4 from '../Images/img4.jpg'
-import img5 from '../Images/img5.jpg'
-import img6 from '../Images/img6.jpg'
-import img7 from '../Images/img7.jpg'
-import img8 from '../Images/img8.jpg'
+import burger from '../Images/burger.png'
+import fish from '../Images/fish.png'
+import FriedChicken from '../Images/FriedChicken.png'
+import Pizza from '../Images/Pizza.png'
+import rice from '../Images/rice.png'
+import Sandwich from '../Images/Sandwich.png'
+import SeaFood from '../Images/SeaFood.png'
+import SpringRoll from '../Images/SpringRoll.png'
+//import img1 from '../Images/img1.jpeg'
+import img2 from '../Images/img2.png'
+import img3 from '../Images/img3.png'
+//import img4 from '../Images/img4.jpg'
+import img5 from '../Images/img5.png'
+//import img6 from '../Images/img6.jpg'
+//import img7 from '../Images/img7.jpg'
+import img9 from '../Images/img9.png'
 
 
 const Gallery = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-       <div>
-        <img src={img1} alt="" />
-       </div>
-       <div>
+    <div className=''>
+      
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-14'>
+      <div>
         <img src={img2} alt="" />
        </div>
        <div className=''>
-        <img className='col-span-2' src={img3} alt="" />
+        <img className='h-56 w-full' src={img3} alt="" />
        </div>
-       <div>
-        <img src={img4} alt="" />
-       </div>
+      
        <div>
         <img src={img5} alt="" />
        </div>
+      
+      
        <div>
-        <img src={img6} alt="" />
+        <img src={img9} alt="" />
        </div>
        <div>
-        <img src={img7} alt="" />
-       </div>
-       <div>
-        <img src={img8} alt="" />
-       </div>
-       <div>
-        <img className='h-full' src={burger} alt="" />
+        <img className='' src={burger} alt="" />
        </div>
        <div>
         <img src={SeaFood} alt="" />
@@ -59,7 +52,7 @@ const Gallery = () => {
        <div>
         <img src={rice} alt="" />
        </div><div>
-        <img src={Pizza} alt="" />
+        <img className='h-56 w-full' src={Pizza} alt="" />
        </div>
        <div>
         <img src={fish} alt="" />
@@ -67,6 +60,7 @@ const Gallery = () => {
        <div>
         <img src={FriedChicken} alt="" />
        </div>
+      </div>
 
     </div>
   )
